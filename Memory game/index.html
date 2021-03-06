@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="facebook">
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li class="card" type="facebook">
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li class="card match" type="instagram">
+                <i class="fa fa-instagram"></i>
+            </li>
+            <li class="card" type="instagram" >
+                <i class="fa fa-instagram"></i>
+            </li>
+            <li class="card" type="twitter">
+                <i class="fa fa-twitter"></i>
+            </li>
+            <li class="card match" type="twitter">
+                <i class="fa fa-twitter"></i>
+            </li>
+            <li class="card" type="youtube">
+                <i class="fa fa-youtube"></i>
+            </li>
+            <li class="card" type="youtube">
+                <i class="fa fa-youtube"></i>
+            </li>
+            <li class="card" type="google">
+                <i class="fa fa-google"></i>
+            </li>
+            <li class="card" type="google">
+                <i class="fa fa-google"></i>
+            </li>
+            <li class="card" type="linkedin">
+                <i class="fa fa-linkedin"></i>
+            </li>
+            <li class="card" type="linkedin">
+                <i class="fa fa-linkedin"></i>
+            </li>
+            <li class="card open show" type="whatsapp">
+                <i class="fa fa-whatsapp"></i>
+            </li>
+            <li class="card" type="whatsapp">
+                <i class="fa fa-whatsapp"></i>
+            </li>
+            <li class="card" type="skype">
+                <i class="fa fa-skype"></i>
+            </li>
+            <li class="card" type="skype">
+                <i class="fa fa-skype"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2 id="resultType"></h2>
+                <a class="close" href=# id="ignore">×</a>
+                <div class="content-1" id="winnerType">
+                    
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p id="element">Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again</a>
+                </button>
+                <button onclick="downloadResult()" id="Download-btn">Download Result</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
